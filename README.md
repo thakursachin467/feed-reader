@@ -1,5 +1,5 @@
-# steps required to successfully run the application
-* open the [index.html] (https://thakursachin467.github.io/feed-reader/)
+# Steps Required To Successfully Run The Application
+* open the [index.html](https://thakursachin467.github.io/feed-reader/)
 * at the bottom of the page there are 7 test case 
 * you can run test cases one by one
 * or click on run all to run all test cases
