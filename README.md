@@ -1,6 +1,12 @@
+# steps required to successfully run the application
+* open the [index.html] (https://thakursachin467.github.io/feed-reader/)
+* at the bottom of the page there are 7 test case 
+* you can run test cases one by one
+* or click on run all to run all test cases
+
 # Project Overview
 
-In this project you are given a web-based application that reads RSS feeds. The original developer of this application clearly saw the value in testing, they've already included [Jasmine](http://jasmine.github.io/) and even started writing their first test suite! Unfortunately, they decided to move on to start their own company and we're now left with an application with an incomplete test suite. That's where you come in.
+In this project we are given a web-based application that reads RSS feeds. The original developer of this application clearly saw the value in testing, they've already included [Jasmine](http://jasmine.github.io/) and even started writing their first test suite! Unfortunately, they decided to move on to start their own company and we're now left with an application with an incomplete test suite. That's where you come in.
 
 
 ## Why this Project?
@@ -12,7 +18,7 @@ Whether you work in an organization that uses test-driven development or in an o
 
 ## What will I learn?
 
-You will learn how to use Jasmine to write a number of tests against a pre-existing application. These will test the underlying business logic of the application as well as the event handling and DOM manipulation.
+we will learn how to use Jasmine to write a number of tests against a pre-existing application. These will test the underlying business logic of the application as well as the event handling and DOM manipulation.
 
 
 ## How will this help my career?
