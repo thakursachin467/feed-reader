@@ -65,7 +65,9 @@ $(function() {
 
         it('it has atleast one entry', function() {
             var number = $('.feed .entry').html();
-            expect(number).not.toBe(' '); //now here we check wether the length of feed is 0 or greater now as loadfeed loaded 0 i.e udacity blog so here the value of feed.length will be 1
+            var num=number.length;
+            console.log(num);
+            expect(num).not.toBe(0); //now here we check wether the length of feed is 0 or greater now as loadfeed loaded 0 i.e udacity blog so here the value of feed.length will be 1
             //now as the feed.length is 1 and it is not equal to 0 so this test case is pased in case there was no feed i.e nothing waspresent at 0 so this test case would have failed
         });
     });
