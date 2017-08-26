@@ -65,6 +65,7 @@ $(function() {
 
         it('it has atleast one entry', function() {
             var number = $('.feed .entry').html();
+            console.log(number);
             var num=number.length;
             console.log(num);
             expect(num).not.toBe(0); //now here we check wether the length of feed is 0 or greater now as loadfeed loaded 0 i.e udacity blog so here the value of feed.length will be 1
