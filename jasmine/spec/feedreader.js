@@ -54,36 +54,29 @@ $(function() {
     });
     /*  Write a new test suite named "Initial Entries" */
     describe('Initial Entries', function() {
-        var number, len;
+
         beforeEach(function(done) {
             loadFeed(0, function() {
-                number = document.querySelectorAll('.feed .entry');
-                len = number.length;
-            });
-            setTimeout(function() {
-                console.log('inside timeout');
                 done();
-            }, 500);
+            });
+
 
         });
 
-
-
-
         it('it has atleast one entry', function() {
-
-            expect(len).not.toBe(0); //now here we check wether the length of feed is 0 or greater now as loadfeed loaded 0 i.e udacity blog so here the value of feed.length will be 1
+            var number = $('.feed .entry').html();
+            expect(number).not.toBe(' '); //now here we check wether the length of feed is 0 or greater now as loadfeed loaded 0 i.e udacity blog so here the value of feed.length will be 1
             //now as the feed.length is 1 and it is not equal to 0 so this test case is pased in case there was no feed i.e nothing waspresent at 0 so this test case would have failed
         });
     });
 
     describe('new feed Selection', function() {
-        var element1, element2; //here we declare element1 becasuse it will be used globally and not only in beforeEach
+        var element1, element2, com; //here we declare element1 becasuse it will be used globally and not only in beforeEach
         beforeEach(function(done) {
             loadFeed(0, function() {
-                element1 = document.querySelector(".feed").text(); //here we get the html content of loadfeed 0 i.e udacity blog into element1
+                element1 = $(".feed").html(); //here we get the html content of loadfeed 0 i.e udacity blog into element1
                 loadFeed(1, function() {
-                    element2 =document.querySelector(".feed").text(); //here we load the another feed i.e 1 which is css tricks. we could have given any number 1,2,3 
+                    element2 = $(".feed").html(); //here we load the another feed i.e 1 which is css tricks. we could have given any number 1,2,3 
                     done(); //pass the control forward
                 });
             });
@@ -91,6 +84,8 @@ $(function() {
 
         it('content changed to next feed', function() {
             //now as in beforeEach loadFeed(1 we loaded css tricks here we are loading all css tricks into element2 
+
+            console.log(element2 === element1);
             expect(element1).not.toBe(element2);
             //now as want to see wether new feed is loaded or not we can do so by comparing the element1 which contain udacity blog and element2 which contain css tricks if they are different it means new feed is loaded
         });
