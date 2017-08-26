@@ -64,17 +64,15 @@ $(function() {
         });
 
         it('it has atleast one entry', function() {
-            var number = $('.feed .entry').html();
+            var number = $('.feed .entry').length;
             console.log(number);
-            var num=number.length;
-            console.log(num);
-            expect(num).not.toBe(0); //now here we check wether the length of feed is 0 or greater now as loadfeed loaded 0 i.e udacity blog so here the value of feed.length will be 1
+            expect(number).not.toBe(0); //now here we check wether the length of feed is 0 or greater now as loadfeed loaded 0 i.e udacity blog so here the value of feed.length will be 1
             //now as the feed.length is 1 and it is not equal to 0 so this test case is pased in case there was no feed i.e nothing waspresent at 0 so this test case would have failed
         });
     });
 
     describe('new feed Selection', function() {
-        var element1, element2, com; //here we declare element1 becasuse it will be used globally and not only in beforeEach
+        var element1, element2; //here we declare element1 becasuse it will be used globally and not only in beforeEach
         beforeEach(function(done) {
             loadFeed(0, function() {
                 element1 = $(".feed").html(); //here we get the html content of loadfeed 0 i.e udacity blog into element1
